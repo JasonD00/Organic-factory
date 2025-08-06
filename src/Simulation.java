@@ -1,15 +1,29 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
 public class Simulation {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        // Components of the specified Ecosystem (Rules are created)
+        CompetitionStrategy competition = new BasicPerformanceStrategy();
+        ReproductionStrategy reproduction = new TopPerformerReproductionStrategy();
+        CullingStrategy culling = new PercentageCullingStrategy();
+        GeneticFactoryBuilder builder = new GeneticFactoryBuilder();
+
+        // Creation of the Ecosystem
+        FactoryEcosystem ecosystem = new FactoryEcosystem(competition, reproduction, culling, builder);
+
+        //For creating base population
+        for (int i = 0; i < 10; i++) {
+            Map<String, Double> initialGenome = new HashMap<>();
+            initialGenome.put("performance_gane", new Random().nextDouble() * 10);
+            initialGenome.put("resource_efficiency_gene", new Random().nextDouble());
+            initialGenome.put("adaptability_gene" , new Random().nextDouble());
+            ecosystem.addFactory(new BasicFactory("Initial" + i, initialGenome));
         }
+
+        // The generations which will run
+        ecosystem.simulate(4);
     }
 }
