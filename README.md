@@ -10,7 +10,7 @@ The main aim of this project was to build a conceptual factory designed to mimic
 The Core Conecpts:
 
 - **MetaFactory**: A factory with its own genome which determines how its own resources are processed.  
-- **Resource**: Consists of input values whioch are consumed by factories to generate a score.  
+- **Resource**: Consists of input values which are consumed by factories to generate a score.  
 - **CompetitionStartegy**: Determines how factories are evaluated.  
 - **CullingStrategy**: Selects the bottom performing factories and removes them.  
 - **ReproductionStrategy**: Generates new factories by copying the top performers and mutating their genes.  
