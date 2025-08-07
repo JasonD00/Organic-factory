@@ -1,4 +1,4 @@
-This project is a meta-factory based idea using the CLI. In this system factories produce outputs based on resource input and internal genetic configurations.  
+This project is a meta-factory based idea using the CLI. In this system, factories produce outputs based on resource input and internal genetic configurations.  
 These factories evolve over time through 3 main processes:
 
 - Evaluation  
