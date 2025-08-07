@@ -5,7 +5,7 @@ These factories evolve over time through 3 main processes:
 - Culling  
 - Reproduction  
 
-The main aim of this project was to build a conceptual factory designed to mimic evolutionary systems and show abstarct simulation logic.  
+The main aim of this project was to build a conceptual factory designed to mimic evolutionary systems and show abstract simulation logic.  
 
 The Core Conecpts:
 
