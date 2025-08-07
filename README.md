@@ -5,7 +5,8 @@ Evaluation
 Culling
 Reproduction
 
-The main aim of this project was to build a conceptual factory designed to mimic evolutionary systems and show abstrct simulation logic. I also wanted to build something abstract and meaningful instead of CRUD excercises and Calculators.
+The main aim of this project was to build a conceptual factory designed to mimic evolutionary systems and show abstrct simulation logic. 
+
 
 The Core Conecpts:
 
@@ -28,7 +29,11 @@ OOP Design Principles
 How It Works:
 
 Factories are initialized with random genomes.
+
 Each factory consumes a resource and is evaluated via a CompetitionStrategy.
+
 The CullingStrategy removes the bottom 30% performers.
+
 The ReproductionStrategy creates new factories from the survivors.
+
 The process repeats for multiple generations.
