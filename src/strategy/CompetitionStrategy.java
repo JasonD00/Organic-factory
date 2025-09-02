@@ -1,3 +1,8 @@
+package strategy;
+
+import ecosystem.Resource;
+import factory.MetaFactory;
+
 // How the factories are evaluated against each other.
 public interface CompetitionStrategy {
 

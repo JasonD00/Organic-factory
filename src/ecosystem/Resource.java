@@ -1,3 +1,5 @@
+package ecosystem;
+
 public class Resource {
     private final double amount;
 

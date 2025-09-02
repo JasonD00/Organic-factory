@@ -1,3 +1,10 @@
+package main;
+
+import builder.GeneticFactoryBuilder;
+import ecosystem.FactoryEcosystem;
+import factory.BasicFactory;
+import strategy.*;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -17,7 +24,7 @@ public class Simulation {
         //For creating base population
         for (int i = 0; i < 10; i++) {
             Map<String, Double> initialGenome = new HashMap<>();
-            initialGenome.put("performance_gane", new Random().nextDouble() * 10);
+            initialGenome.put("performance_gene", new Random().nextDouble() * 1.5);
             initialGenome.put("resource_efficiency_gene", new Random().nextDouble());
             initialGenome.put("adaptability_gene" , new Random().nextDouble());
             ecosystem.addFactory(new BasicFactory("Initial" + i, initialGenome));

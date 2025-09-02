@@ -1,3 +1,7 @@
+package factory;
+
+import ecosystem.Resource;
+
 import java.util.Map;
 
 // Representation of a single organism in the ecosystem, and is the blueprint for each factory

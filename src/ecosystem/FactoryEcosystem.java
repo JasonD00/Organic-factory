@@ -1,3 +1,11 @@
+package ecosystem;
+
+import builder.GeneticFactoryBuilder;
+import factory.MetaFactory;
+import strategy.CompetitionStrategy;
+import strategy.CullingStrategy;
+import strategy.ReproductionStrategy;
+
 import java.util.*;
 
 // the strategies for components for ecosystem behaviour
@@ -38,7 +46,7 @@ public class FactoryEcosystem {
         Map<MetaFactory, Double> scores = new HashMap<>();
         Resource resource = new Resource(random.nextDouble() * 100);
 
-        System.out.println("--- Competition Phase: Resource amount is " + String.format("%.2f", resource.getAmount()) + " ---");
+        System.out.println("--- Competition Phase: ecosystem.Resource amount is " + String.format("%.2f", resource.getAmount()) + " ---");
         for (MetaFactory factory : population) {
             double score = competition.evaluate(factory, resource);
             scores.put(factory, score);

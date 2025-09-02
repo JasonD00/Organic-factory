@@ -1,8 +1,13 @@
+package builder;
+
+import factory.BasicFactory;
+import factory.MetaFactory;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-// GeneticFactoryBuilder builds a new MetaFactory. Takes genes from existing factories and creates new ones with a new set
+// builder.GeneticFactoryBuilder builds a new factory.MetaFactory. Takes genes from existing factories and creates new ones with a new set
 public class GeneticFactoryBuilder {
 
     private final Random random = new Random();
@@ -20,7 +25,7 @@ public class GeneticFactoryBuilder {
 
         }
 
-        // After genes are mutated, the code creates a new BasicFactory using a new name and slightly altered genes
+        // After genes are mutated, the code creates a new factory.BasicFactory using a new name and slightly altered genes
 return new BasicFactory(name, offspringGenome);
     }
 }
